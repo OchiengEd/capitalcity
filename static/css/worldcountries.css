@@ -1,0 +1,27 @@
+body {
+  padding-top: 70px;
+}
+div#trivia-question {
+  width: 100%;
+  font-size: 48px;
+}
+
+div#trivia-answer {
+  font-size: 32px;
+  width: 100%;
+  height: 60px;
+  color: green;
+}
+
+div#trivia-answer .unseen {
+  font-size: 32px;
+  width: 100%;
+  height: 40px;
+  visibility: hidden;
+}
+
+div#trivia-bonus {
+  font-style: italic;
+  margin-top: 20px;
+  padding-top: 20px;
+}
