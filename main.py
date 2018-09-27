@@ -14,7 +14,7 @@ def landing():
 
 @application.route('/trivia')
 def world_countries():
-  url = 'http://127.0.0.1:8080/trivia'
+  url = 'http://countrycode/trivia'
   response = requests.get(url)
   if response.status_code == 200:
     trivia_url = 'https://restcountries.eu/rest/v2/alpha/{}?fields=name;capital;region'.format(response.content)
