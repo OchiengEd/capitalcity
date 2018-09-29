@@ -3,5 +3,5 @@ RUN mkdir /webapp; apk update && apk add py2-pip && pip install --no-cache-dir g
 WORKDIR /webapp
 ADD main.py wsgi.py /webapp/
 USER gunicorn
-CMD gunicorn -b 0.0.0.0:8080 -w 2 wsgi
-EXPOSE 8080
+CMD gunicorn -b 0.0.0.0:8084 -w 2 wsgi
+EXPOSE 8084
