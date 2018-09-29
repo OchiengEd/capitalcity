@@ -1,6 +1,7 @@
 #!/usr/bin/env python
-from flask import Flask, jsonify, render_template
+from flask import Flask, render_template
 import requests, json
+import os
 
 api_url = "https://restcountries.eu/rest/v2/name/{}?fields=name;capital;region"
 application = Flask(__name__)
@@ -14,7 +15,8 @@ def landing():
 
 @application.route('/trivia')
 def world_countries():
-  url = 'http://127.0.0.1:8080/trivia'
+  cc_server = os.environ['COUNTRY_CODE_SRV']
+  url = 'http://{}/trivia'.format(cc_server)
   response = requests.get(url)
   if response.status_code == 200:
     trivia_url = 'https://restcountries.eu/rest/v2/alpha/{}?fields=name;capital;region'.format(response.content)
