@@ -25,3 +25,7 @@ div#trivia-bonus {
   margin-top: 20px;
   padding-top: 20px;
 }
+
+h1.my-4.text-center.text-lg-left {
+  color: red;
+}
