@@ -13,7 +13,7 @@ div#trivia-answer {
   color: green;
 }
 
-div#trivia-answer .unseen {
+div#trivia-answerunseen {
   font-size: 32px;
   width: 100%;
   height: 40px;
