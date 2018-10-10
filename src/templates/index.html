@@ -56,6 +56,11 @@ What is the capital city of {{ country.name }}?
   {{ country.capital }}
 </div>
 <!-- Trivia answer -->
+<div id="trivia-btn">
+<button type="button" class="btn btn-primary" onclick="$('div#trivia-answer').removeClass('unseen');">Check</button>
+<button type="button" class="btn btn-secondary" onclick="location.reload();">Next..</button>
+</div><!-- Trivia button -->
+
 <p>
 <div id="trivia-bonus">
   BONUS: It is found in the region {{ country.region }}
