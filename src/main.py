@@ -1,5 +1,5 @@
 #!/usr/bin/env python
-from flask import Flask, render_template
+from flask import Flask, render_template, redirect, url_for
 import requests, json
 import os
 
@@ -11,7 +11,7 @@ def landing():
   page = """<html><head><title>World Countries</title></head><body>
     Welcome to worldcountries api. To interact with the api,
     </body></html>"""
-  return page
+  return redirect('/trivia')
 
 @application.route('/trivia')
 def world_countries():
